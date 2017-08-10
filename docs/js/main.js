@@ -1,5 +1,3 @@
-var panZoomTiger = svgPanZoom('#world-map');
-
 var ds = new Miso.Dataset({
   importer : Miso.Dataset.Importers.GoogleSpreadsheet,
   parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
@@ -34,6 +32,7 @@ function render_map (locations) {
   svg += "</svg>";
   
   document.getElementById("map").innerHTML = svg;
+  var panZoomTiger = svgPanZoom('#world-map');
 }
 
 function render_point (location) {
