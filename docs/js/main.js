@@ -1,3 +1,5 @@
+var panZoomTiger = svgPanZoom('#world-map');
+
 var ds = new Miso.Dataset({
   importer : Miso.Dataset.Importers.GoogleSpreadsheet,
   parser : Miso.Dataset.Parsers.GoogleSpreadsheet,
@@ -21,7 +23,7 @@ function render_map (locations) {
   var width = max_x - min_x;
   var height = max_z - min_z;
   
-  var svg = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\""
+  var svg = "<svg id=\"world-map\" xmlns=\"http://www.w3.org/2000/svg\" width=\""
   + width + "\" height=\"" + height + "\" viewBox=\"" + min_x
   + " " + min_z + " " + max_x + " " + max_z + "\">";
   
