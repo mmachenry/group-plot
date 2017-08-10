@@ -31,7 +31,7 @@ function render_map (locations) {
   
   svg += "</svg>";
   
-  document.getElementById("map").innerHTML = svg;
+  document.getElementById("container").innerHTML = svg;
   var panZoomTiger = svgPanZoom('#world-map');
 }
 
