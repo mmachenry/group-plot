@@ -21,9 +21,9 @@ function render_map (locations) {
   var width = max_x - min_x;
   var height = max_z - min_z;
   
-  var svg = "<svg id=\"world-map\" xmlns=\"http://www.w3.org/2000/svg\" width=\""
-  + width + "\" height=\"" + height + "\" viewBox=\"" + min_x
-  + " " + min_z + " " + max_x + " " + max_z + "\">";
+  var svg = "<svg id=\"world-map\" xmlns=\"http://www.w3.org/2000/svg\" "
+  + "style=\"display: inline; width: inherit; min-width: inherit; max-width: inherit; height: inherit; min-height: inherit; max-height: inherit; \" "
+  + "viewBox=\"" + min_x + " " + min_z + " " + max_x + " " + max_z + "\">";
   
   for (var i = 0; i < locations.length; i++) {
     svg += render_point(locations[i]);
